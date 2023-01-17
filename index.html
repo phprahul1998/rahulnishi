@@ -44,10 +44,11 @@
 
         <!-- Music -->
         <div class="gla_music_icon">
-            <i class="ti ti-music"></i>
+            <i  onclick="play()" class="ti ti-music"></i>
         </div>
+
         <div class="gla_music_icon_cont">
-            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/66757544&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+           <!--  <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/66757544&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe> -->
         </div>
 
         <!-- Header -->
@@ -564,7 +565,6 @@
 
 
 
-
     </div>
     <!-- Page End -->
 
@@ -588,6 +588,11 @@
     + "*Message*: " + message + "%0a"
 
     window.open(url, '_blank').focus();
+}
+
+function play() {
+  var audio = new Audio('ram-ram.mp3');
+  audio.play();
 }
     </script>
 
