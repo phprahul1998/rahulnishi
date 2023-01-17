@@ -44,7 +44,7 @@
 
         <!-- Music -->
         <div class="gla_music_icon">
-            <i  onclick="play()" class="ti ti-music"></i>
+            <i  id="button" class="ti ti-music"></i>
         </div>
 
         <div class="gla_music_icon_cont">
@@ -564,7 +564,7 @@
         <!-- Content End -->
 
 
-
+<audio id="player" src="ram-ram.mp3"> </audio>
     </div>
     <!-- Page End -->
 
@@ -590,10 +590,26 @@
     window.open(url, '_blank').focus();
 }
 
-function play() {
-  var audio = new Audio('ram-ram.mp3');
-  audio.play();
-}
+
+$(document).ready(function() {
+  var playing = false;
+
+  $('#button').click(function() {
+      $(this).toggleClass("down");
+
+      if (playing == false) {
+          document.getElementById('player').play();
+          playing = true;
+          $(this).text("Pause");
+
+      } else {
+        document.getElementById('player').pause();
+        playing = false;
+        $(this).text("Play");
+      }
+
+  });
+});
     </script>
 
 </body>
