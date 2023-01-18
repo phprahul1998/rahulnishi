@@ -42,6 +42,15 @@
   animation: glow 1s infinite ;
   transition:0.5s;
 }
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
     </style>
 </head>
 
@@ -84,7 +93,7 @@
                         <img src="https://i.pinimg.com/originals/fb/23/92/fb239215b83ca2ff3c17c299e7d79639.png" alt="" class="gla_logo_rev">
                         <div class="gla_logo_txt">
                             <!-- Logo -->
-                            <a href="/" class="gla_logo">Rahul  & Nishi</a>
+                            <a href="/" class="gla_logo">Rahul<span  class="blink_me" style="text-transform: lowercase;color: #f53556;">weds</span> Nishi</a>
 
                             <!-- Text Logo -->
                             <div class="gla_logo_und">February 28, 2023</div>
