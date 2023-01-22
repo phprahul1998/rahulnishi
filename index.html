@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul weds Nishi</title>
+    
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -641,8 +641,10 @@
     
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var desc ="Rahul & Nishi  " +days + " days until we come MR. & MRS. 😊 28 February 2023";
+    var desc ="Rahul ❤️  Nishi .  " +days + " days until we come MR. & MRS. 😊 28 February 2023";
     $('meta[property="description"]').remove();
+    $('head').append('<title>'+desc+'</title>');
+
     $("head").append('<meta property="description" content="'+desc+'">');
     });
     function gotowhatsapp() {
