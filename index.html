@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahul & Nishi</title>
-
+    <title>Rahul weds Nishi</title>
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -628,9 +627,25 @@
     <!-- Theme JS -->
     <script   src="js/glanz_script.js"></script>
     <script  type="text/javascript">
-        
-        function gotowhatsapp() {
+
+    $(document).ready(function() {
+    var countDownDate = new Date("Feb 28, 2023").getTime();
+
+// Update the count down every 1 second
+
+  // Get today's date and time
+  var now = new Date().getTime();
     
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var desc ="Rahul & Nishi  " +days + " days until we come MR. & MRS. 😊 28 February 2023";
+    $('meta[property="description"]').remove();
+    $("head").append('<meta property="description" content="'+desc+'">');
+    });
+    function gotowhatsapp() {
     var name = document.getElementById("name").value;
     var message = document.getElementById("message").value;
     var url = "https://wa.me/7204266841?text=" 
@@ -638,11 +653,13 @@
     + "*Message*: " + message + "%0a"
 
     window.open(url, '_blank').focus();
-}
+    }
 
 
 
 $(document).ready(function() {
+
+
   var playing = false;
   $('#button').click(function() {
       $(this).toggleClass("down");
