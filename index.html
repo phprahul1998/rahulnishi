@@ -245,7 +245,7 @@
                 <div class="container text-center">
                     <p><img src="images/animations/flower5.gif" data-bottom-top="@src:images/animations/flower5.gif; opacity:1" class="gla_animated_flower" height="150" alt=""></p>
                     <h2>Our Story</h2>
-                    <h3 class="gla_subtitle">The Fourth of July</h3>
+                    <h3 class="gla_subtitle">Childhood friendship</h3>
 
 
 
@@ -642,10 +642,15 @@
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var desc ="Rahul ❤️  Nishi .  " +days + " days until we become MR. & MRS. 😊 .Save the date  28 February 2023.";
-    $('meta[property="description"]').remove();
-    $('head').append('<title>'+desc+'</title>');
+    $('meta[property="og:description"]').remove();
+    $('meta[property="og:title"]').remove();
 
-    $("head").append('<meta property="description" content="'+desc+'">');
+    $("head").append('<meta property="og:title" content="'+desc+'">');
+
+    // $('head').append('<title>'+desc+'</title>');
+
+    $("head").append('<meta property="og:description" content="'+desc+'">');
+
     });
     function gotowhatsapp() {
     var name = document.getElementById("name").value;
