@@ -246,9 +246,6 @@
                     <p><img src="images/animations/flower5.gif" data-bottom-top="@src:images/animations/flower5.gif; opacity:1" class="gla_animated_flower" height="150" alt=""></p>
                     <h2>Our Story</h2>
                     <h3 class="gla_subtitle">Childhood friendship</h3>
-
-
-
                     <p>Childhood bonds last longer, because if you can trust a person sitting behind on a bicycle that has no brakes, you can trust that person with your life.</p>
 
 
@@ -642,11 +639,8 @@
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var desc ="Rahul ❤️  Nishi .  " +days + " days until we become MR. & MRS. 😊 .Save the date  28 February 2023.";
     $('meta[property="og:description"]').remove();
-    $('meta[property="og:title"]').remove();
 
-    $("head").append('<meta property="og:title" content="'+desc+'">');
-
-    $('head').append('<title>'+desc+'</title>');
+    $('head').append('<title>Rahul ❤️  Nishi .  "'+ days +'" days until we become MR. & MRS. 😊 .Save the date  28 February 2023.</title>');
 
     $("head").append('<meta property="og:description" content="'+desc+'">');
 
