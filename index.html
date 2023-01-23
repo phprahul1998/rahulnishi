@@ -17,7 +17,10 @@
 
     <!-- Theme CSS -->
     <link  href="css/glanz_style.css?1422585377" rel="stylesheet">
-
+<meta property="og:image" content="https://rahulnishi.online/images/rahulnihsi.webp" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="400" />
     <!-- Google Fonts -->
     <link  href="https://fonts.googleapis.com/css?family=Dosis:300,400,600,700%7COpen+Sans:300,400,700%7CPlayfair+Display:400,400i,700,700i" rel="stylesheet">
 
@@ -635,9 +638,20 @@
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var desc ="Rahul ❤️  Nishi .  " +days + " days until we become MR. & MRS. 😊 .Save the date  28 February 2023.";
-    $('head').append('<title>Rahul ❤️  Nishi .  '+ days +' days until we become MR. & MRS. 😊 .Save the date  28 February 2023.</title>');
+
+  $('meta[property="og:title"]').remove();
+  $('meta[property="og:description"]').remove();
+  $('meta[property="og:url"]').remove();
+  $("head").append('<meta property="og:title" content="'+desc+'">');
+  $("head").append('<meta property="og:description" content="'+desc+'">');
+  $("head").append('<meta property="og:url" content="'+desc+'">');
 
     $('#savedate').append('<span>Rahul ❤️  Nishi .  '+ days +' days until we become MR. & MRS. 😊 .Save the date  28 February 2023.</span>');
+
+
+
+    $('head').append('<title>Rahul ❤️  Nishi .  '+ days +' days until we become MR. & MRS. 😊 .Save the date  28 February 2023.</title>');
+
 
 
     });
