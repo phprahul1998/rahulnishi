@@ -179,8 +179,6 @@
                             </li>
                             <li class=""><a href="#weddingdetails">Wedding Details</a>
                             </li>
-                           
-
                                 </ul>
                         
                     </div>
@@ -244,9 +242,9 @@
 
                 <div class="container text-center">
                     <p><img src="images/animations/flower5.gif" data-bottom-top="@src:images/animations/flower5.gif; opacity:1" class="gla_animated_flower" height="150" alt=""></p>
-                    <h2>Our Story</h2>
-                    <h3 class="gla_subtitle">Childhood friendship</h3>
-                    <p>Childhood bonds last longer, because if you can trust a person sitting behind on a bicycle that has no brakes, you can trust that person with your life.</p>
+                    <h2 id="savedate" class="gla_subtitle"></h2>
+
+                  
 
 
 
@@ -634,11 +632,12 @@
     
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
-    
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var desc ="Rahul ❤️  Nishi .  " +days + " days until we become MR. & MRS. 😊 .Save the date  28 February 2023.";
     $('head').append('<title>Rahul ❤️  Nishi .  '+ days +' days until we become MR. & MRS. 😊 .Save the date  28 February 2023.</title>');
+
+    $('#savedate').append('<span>Rahul ❤️  Nishi .  '+ days +' days until we become MR. & MRS. 😊 .Save the date  28 February 2023.</span>');
 
 
     });
