@@ -638,11 +638,8 @@
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var desc ="Rahul ❤️  Nishi .  " +days + " days until we become MR. & MRS. 😊 .Save the date  28 February 2023.";
-    $('meta[property="og:description"]').remove();
-
     $('head').append('<title>Rahul ❤️  Nishi .  '+ days +' days until we become MR. & MRS. 😊 .Save the date  28 February 2023.</title>');
 
-    $("head").append('<meta property="og:description" content="'+desc+'">');
 
     });
     function gotowhatsapp() {
